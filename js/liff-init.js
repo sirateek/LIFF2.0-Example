@@ -1,7 +1,7 @@
   // ----- Configuration Zone! -----
   // Don't forget to change this to your LIFF ID
 
-  const liffId = "Config your LIFF ID over here"
+  const liffId = "1653671627-vopabBp5"
 
   // Don't forget to change this to your LIFF ID
 
@@ -14,13 +14,22 @@ if (liff.isLoggedIn()){
     document.getElementById("statusMessage").innerHTML = profile.statusMessage
     document.getElementById("pictureUrl").href = profile.pictureUrl
     document.getElementById("pictureUrl").innerHTML = profile.pictureUrl
-
+    document.getElementById("email").innerHTML = liff.getDecodedIDToken().email
+    
+    
+  }).catch( (e) => {
+    document.getElementById("userId").innerHTML = "No data, " + e
+    document.getElementById("displayName").innerHTML = "No data, " + e
+    document.getElementById("statusMessage").innerHTML = "No data, " + e
+    document.getElementById("pictureUrl").innerHTML = "No data, " + e
+    document.getElementById("email").innerHTML = "No data, " + e
   })
 } else {
     document.getElementById("userId").innerHTML = "No data, Login first"
     document.getElementById("displayName").innerHTML = "No data, Login first"
     document.getElementById("statusMessage").innerHTML = "No data, Login first"
     document.getElementById("pictureUrl").innerHTML = "No data, Login first"
+    document.getElementById("email").innerHTML = "No data, Login first"
 }
 
 document.getElementById("getOS").innerHTML = liff.getOS()
