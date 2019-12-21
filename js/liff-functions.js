@@ -40,3 +40,11 @@ function getProfile(){
   function closeWindow(){
     liff.closeWindow()
   }
+  
+  function logout(){
+    if (liff.isLoggedIn()) {
+      liff.logout();
+      window.alert("Successfully to Logout")
+      location.reload();
+    }
+  }
