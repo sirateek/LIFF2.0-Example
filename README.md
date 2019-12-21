@@ -1,2 +1,17 @@
 # LIFF2.0-Example
-This is the example project of how to use LINE Front end Framework (LIFF) 2.0. This will make you get started easier.
+This is the example open source project of how to use LINE Front end Framework (LIFF) 2.0. This will make you get started easier.
+
+# Deploy
+You can clone this git and deploy it directly on your firebase hosting or on your web hosting service.
+
+# Try it now.
+You can try this LIFF right now by clicking the url below. It will automatically select browser to open(LINE [If it avaliable], External Web browser).
+
+https://liff.line.me/1653671627-vopabBp5
+
+# Check out my tutorial
+This project is a part of my tutorial on medium.com, Check it out to catch the lastest update in LIFF 2.0
+
+http://medium.com/@sirateek
+
+**Develop with ♡ by Siratee K.**
