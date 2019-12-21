@@ -1,10 +1,9 @@
+  // ----- Configuration Zone! -----
+  // Don't forget to change this to your LIFF ID
 
-// ----- Configuration Zone! -----
-// Don't forget to change this to your LIFF ID
+  const liffId = "1653671627-vopabBp5"
 
-    const liffId = "1653671627-vopabBp5"
-
-// Don't forget to change this to your LIFF ID
+  // Don't forget to change this to your LIFF ID
 
 liff.init({liffId: liffId}, () => {}, (err) => {window.alert(err)})
 if (liff.isLoggedIn()){
@@ -31,30 +30,29 @@ document.getElementById("isInClient").innerHTML = liff.isInClient()
 document.getElementById("isLoggedIn").innerHTML = liff.isLoggedIn()
 var context = liff.getContext()
 if (context !== null){
-  document.getElementById("context_type").innerHTML = "type: " + context.type
-  document.getElementById("context_viewType").innerHTML = "viewType: " + context.viewType
-  document.getElementById("context_userId").innerHTML = "userId: " + context.userId
-  document.getElementById("context_utouId").innerHTML = "utouId: " + context.utouId
+  document.getElementById("context_type").innerHTML = context.type
+  document.getElementById("context_viewType").innerHTML = context.viewType
+  document.getElementById("context_userId").innerHTML = context.userId
   if (context.utouId){
-    document.getElementById("context_utouId").innerHTML = "roomId: " + context.utouId
+    document.getElementById("context_utouId").innerHTML = context.utouId
   } else {
-    document.getElementById("context_utouId").innerHTML = "roomId: You are not in the utou"
+    document.getElementById("context_utouId").innerHTML = "You are not in the utou"
   }
   if (context.roomId){
-    document.getElementById("context_roomId").innerHTML = "roomId: " + context.roomId
+    document.getElementById("context_roomId").innerHTML =  context.roomId
   } else {
-    document.getElementById("context_roomId").innerHTML = "roomId: You are not in the room"
+    document.getElementById("context_roomId").innerHTML = "You are not in the room"
   }
   if (context.groupId){
-    document.getElementById("context_groupId").innerHTML = "groupId: " + context.groupId
+    document.getElementById("context_groupId").innerHTML = context.groupId
   } else {
-    document.getElementById("context_groupId").innerHTML = "groupId: You are not in the group "
+    document.getElementById("context_groupId").innerHTML = "You are not in the group "
   }
 } else {
-  document.getElementById("context_type").innerHTML = "type: No data."
-  document.getElementById("context_viewType").innerHTML = "viewType: No data."
-  document.getElementById("context_userId").innerHTML = "userId: No data."
-  document.getElementById("context_utouId").innerHTML = "utouId: No data."
-  document.getElementById("context_roomId").innerHTML = "roomId: No data." 
-  document.getElementById("context_groupId").innerHTML = "groupId: No data."
+  document.getElementById("context_type").innerHTML = "No data."
+  document.getElementById("context_viewType").innerHTML = "No data."
+  document.getElementById("context_userId").innerHTML = "No data."
+  document.getElementById("context_utouId").innerHTML = "No data."
+  document.getElementById("context_roomId").innerHTML = "No data." 
+  document.getElementById("context_groupId").innerHTML = "No data."
 }
