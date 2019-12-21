@@ -1,3 +1,11 @@
+
+// ----- Configuration Zone! -----
+// Don't forget to change this to your LIFF ID
+
+    const liffId = "1653671627-vopabBp5"
+
+// Don't forget to change this to your LIFF ID
+
 liff.init({liffId: liffId}, () => {}, (err) => {window.alert(err)})
 if (liff.isLoggedIn()){
     liff.getProfile().then((profile) => {
