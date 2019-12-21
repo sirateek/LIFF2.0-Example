@@ -4,6 +4,8 @@ This is the example open source project of how to use LINE Front end Framework (
 # Deploy
 You can clone this git and deploy it directly on your firebase hosting or on your web hosting service.
 
+`Please ensure that you have already configured your LIFF ID in file liff-init.js before deploying it.`
+
 # Try it now.
 You can try this LIFF right now by clicking the url below. It will automatically select browser to open(LINE [If it avaliable], External Web browser).
 
