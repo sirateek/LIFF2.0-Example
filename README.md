@@ -1,3 +1,4 @@
+![](https://sirateek.github.io/LIFF2.0-Example/icon/badge.png)
 # LIFF2.0-Example
 This is the example open source project of how to use LINE Front end Framework (LIFF) 2.0. This will make you get started easier. You can see almost every LIFF data that you can get and you can try almost every feature of LIFF 2.0
 
