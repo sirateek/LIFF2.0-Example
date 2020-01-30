@@ -14,8 +14,8 @@ You can try this LIFF right now by clicking the url below. It will automatically
 https://liff.line.me/1653671627-vopabBp5
 
 # Check out my tutorial
-This project is a part of my tutorial on medium.com, Check it out to catch the lastest update in LIFF 2.0
+This project is a part of my tutorial on medium.com, Check it out to catch the latest update in LIFF 2.0
 
-http://medium.com/@sirateek
+https://link.medium.com/Dvtu4gecC2?fbclid=IwAR1rmWLc5cDRUuorhFtlxnT8l4EdNNJjm2CSliY35VeulIklF0gBoZ8h0To
 
 **Develop with ♡ by Siratee K.**
