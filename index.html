@@ -1,103 +1,170 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>LIFF 2.0 Example</title>
-    <link rel="shortcut icon" href="icon/icon.ico" type="image/x-icon">
-    <link rel="icon" href="icon/icon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="icon/icon.ico" type="image/x-icon" />
+    <link rel="icon" href="icon/icon.ico" type="image/x-icon" />
     <style media="screen">
-        body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-        #message { background: white; max-width: 1000px; margin: 10px auto 16px; padding: 32px 24px; border-radius: 10px; }
-        #message h2 { color: #ffa100; font-weight: bold; font-size: 30px; margin: 0 0 8px; }
-        #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-        #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-        #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-        #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-        #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-        @media (max-width: 600px) {
-          body, #message { margin-top: 0; background: white; box-shadow: none; }
-          body { border-top: 16px solid #ffa100; }
+      body {
+        background: #eceff1;
+        color: rgba(0, 0, 0, 0.87);
+        font-family: Roboto, Helvetica, Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      #message {
+        background: white;
+        max-width: 1000px;
+        margin: 10px auto 16px;
+        padding: 32px 24px;
+        border-radius: 10px;
+      }
+      #message h2 {
+        color: #ffa100;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 0 0 8px;
+      }
+      #message h1 {
+        font-size: 22px;
+        font-weight: 300;
+        color: rgba(0, 0, 0, 0.6);
+        margin: 0 0 16px;
+      }
+      #message p {
+        line-height: 140%;
+        margin: 16px 0 24px;
+        font-size: 14px;
+      }
+      #message a {
+        display: block;
+        text-align: center;
+        background: #039be5;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: white;
+        padding: 16px;
+        border-radius: 4px;
+      }
+      #message,
+      #message a {
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+      }
+      #load {
+        color: rgba(0, 0, 0, 0.4);
+        text-align: center;
+        font-size: 13px;
+      }
+      @media (max-width: 600px) {
+        body,
+        #message {
+          margin-top: 0;
+          background: white;
+          box-shadow: none;
         }
-        table {
-            margin-top: 10px;
-            border: 2px solid black;
-            border-collapse: collapse;
-            width:100%;
+        body {
+          border-top: 16px solid #ffa100;
         }
+      }
+      table {
+        margin-top: 10px;
+        border: 2px solid black;
+        border-collapse: collapse;
+        width: 100%;
+      }
 
-        table td {
-            border: 1px solid black;
-        }
+      table td {
+        border: 1px solid black;
+      }
 
-        table td.shrink {
-            
-            white-space: wrap;
-            font-size: 19px;
-            padding: 5px;
-            background-color: yellow;
-        }
-        table td.shrink_context {
-            
-            white-space: wrap;
-            font-size: 19px;
-            padding: 5px;
-            background-color: rgb(0, 255, 106);
-        }
-        table td.shrink_top {
-          white-space:nowrap;
-          background-color: black;
-          color: white;
-          font-size: 25px;
-        }
-        table td.expand {
-            width: 99%;
-            white-space: wrap;
-            font-size: 19px;
-            padding: 5px;
-        }
-        table td.expand_top {
-            width: 99%;
-            white-space: wrap;
-            background-color: black;
-        }
-        tr:hover {background-color: gray;}
+      table td.shrink {
+        white-space: wrap;
+        font-size: 19px;
+        padding: 5px;
+        background-color: yellow;
+      }
+      table td.shrink_context {
+        white-space: wrap;
+        font-size: 19px;
+        padding: 5px;
+        background-color: rgb(0, 255, 106);
+      }
+      table td.shrink_top {
+        white-space: nowrap;
+        background-color: black;
+        color: white;
+        font-size: 25px;
+      }
+      table td.expand {
+        width: 99%;
+        white-space: wrap;
+        font-size: 19px;
+        padding: 5px;
+      }
+      table td.expand_top {
+        width: 99%;
+        white-space: wrap;
+        background-color: black;
+      }
+      tr:hover {
+        background-color: gray;
+      }
 
-        button {
-          background-color: #4CAF50; /* Green */
-          border: none;
-          color: white;
-          padding: 10px 10px;
-          text-align: center;
-          text-decoration: none;
-          display: inline-block;
-          font-size: 16px;
-          border-radius: 5px;
-          -webkit-transition-duration: 0.4s; /* Safari */
-          transition-duration: 0.4s;
-          cursor: pointer;
-        }
+      button {
+        background-color: #4caf50; /* Green */
+        border: none;
+        color: white;
+        padding: 10px 10px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        border-radius: 5px;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+        cursor: pointer;
+      }
 
-        button:hover{
-          background-color: honeydew;
-          color: black;
-        }
+      button:hover {
+        background-color: honeydew;
+        color: black;
+      }
     </style>
   </head>
   <body>
     <div id="message">
       <center><h2>LIFF 2.0 | Example</h2></center>
-     
-      <center><img src="https://firebasestorage.googleapis.com/v0/b/uce-bot.appspot.com/o/user.jpg?alt=media&token=554b90c5-562c-469a-bfee-f36b5e3f54c9" style="border-radius: 10px;" width="150px" height="150px" id="profileImage"/></center>
-      <center><button onclick="login()"> liff.login() </button> <button onclick="logout()"> liff.logout() </button> <button onclick="sendMessage()"> liff.sendMessage() </button> <button onclick="scanCode()"> liff.scanCode() </button> <button onclick="openWindow()"> liff.openWindow() </button> <button onclick="closeWindow()"> liff.closeWindow() </button></center>
+
+      <center>
+        <img
+          src="https://firebasestorage.googleapis.com/v0/b/uce-bot.appspot.com/o/user.jpg?alt=media&token=554b90c5-562c-469a-bfee-f36b5e3f54c9"
+          style="border-radius: 10px;"
+          width="150px"
+          height="150px"
+          id="profileImage"
+        />
+      </center>
+      <center>
+        <button onclick="login()">liff.login()</button>
+        <button onclick="logout()">liff.logout()</button>
+        <button onclick="sendMessage()">liff.sendMessage()</button>
+        <button onclick="scanCode()">liff.scanCode()</button>
+        <button onclick="openWindow()">liff.openWindow()</button>
+        <button onclick="closeWindow()">liff.closeWindow()</button>
+        <button onclick="shareTargetPicker()">liff.shareTargetPicker()</button>
+      </center>
       <table>
         <tr>
-            <td class="shrink_top">* Profile</td>
-            <td class="expand_top"><button onclick="getProfile()">View raw JSON Data</button> </td>
+          <td class="shrink_top">* Profile</td>
+          <td class="expand_top">
+            <button onclick="getProfile()">View raw JSON Data</button>
+          </td>
         </tr>
         <tr>
-            <td class="shrink">userId</td>
-            <td class="expand" id="userId">Loading . . .</td>
+          <td class="shrink">userId</td>
+          <td class="expand" id="userId">Loading . . .</td>
         </tr>
         <tr>
           <td class="shrink">displayName</td>
@@ -112,8 +179,10 @@
           <td class="expand" id="email">Loading . . .</td>
         </tr>
         <tr>
-            <td class="shrink">pictureUrl</td>
-            <td class="expand"><a id="pictureUrl" target="_blank">Loading . . .</a></td>
+          <td class="shrink">pictureUrl</td>
+          <td class="expand">
+            <a id="pictureUrl" target="_blank">Loading . . .</a>
+          </td>
         </tr>
         <tr>
           <td class="shrink_top">* LIFF Context</td>
@@ -141,11 +210,15 @@
         </tr>
         <tr>
           <td class="shrink_context">liff.getAccessToken()</td>
-          <td class="expand" id="getAccessToken"><button onclick="getAccessToken()">show AccessToken</button></td>
+          <td class="expand" id="getAccessToken">
+            <button onclick="getAccessToken()">show AccessToken</button>
+          </td>
         </tr>
         <tr>
           <td class="shrink_context">liff.getContext()</td>
-          <td class="expand" id=""><button onclick="getContext()">show raw JSON Data</button></td>
+          <td class="expand" id="">
+            <button onclick="getContext()">show raw JSON Data</button>
+          </td>
         </tr>
         <tr>
           <td class="shrink_context">| -> type</td>
@@ -171,10 +244,9 @@
           <td class="shrink_context">| -> groupId</td>
           <td class="expand" id="context_groupId">Loading . . .</td>
         </tr>
-    </table>
-   
+      </table>
     </div>
-    
+
     <p id="load">Develop with ♡ by Siratee K.</p>
     <script src="https://static.line-scdn.net/liff/edge/2.1/sdk.js"></script>
     <script src="js/liff-init.js?1234"></script>
